@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"> 
+	<title>seaTest</title>
+	<link href="http://cdn.bootcss.com/layer/2.4/skin/layer.min.css" rel="stylesheet">
+	<style>
+	</style>
+</head>
+<body>
+	<div class="button">button</div>
+
+	<p id="hh" data-code="123">asfsdfdsfdsfdsf</p>
+
+
+	<script src="./js/seajs/2.3.0/sea.js" id="seajsnode" ></script>
+	<!-- 
+		加上 seajsnode 值，可以让 sea.js 直接获取到自身路径，而不需要通过其他机制去自动获取。
+		这对性能和稳定性会有一定提升，推荐默认都加上。
+	 -->
+
+	<script src="./js/config-seajs.js" ></script>
+
+	<script type="text/javascript">
+			seajs.use('main/test');
+			/*
+				seajs.use 理论上只用于加载启动，不应该出现在 define 中的模块代码里。
+				在模块代码里需要异步加载其他模块时，推荐使用 require.async 方法。
+			*/
+	</script>
+</body>
+</html>
+
+
